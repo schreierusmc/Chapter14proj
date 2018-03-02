@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<title>Chapter 14 JavaScript Form</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<link rel="stylesheet" href="format1.css"
+</head>
+
+<h1>Fill out the form below to sign up</h1>
+
+<body>
+<form action="http://www.markmurtha.com/csis128/readform.asp" method="post" />
+<fieldset>
+	<table>
+		<tr>
+			<td>
+				Name: 
+			</td>
+			<td>
+				<input type="text" name="name" value="" class="name" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Email:
+			</td>
+			<td>
+				<input type="text" name="email" value="" class="email" />
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	<input type="submit" value="Sign Up Now" />
+    <input type="reset" />
+	<span style="color: red;"></span>
+</form>
+    </fieldset>
+<script type="text/javascript">
+$("form").submit(function() {
+var message = "Name field must be filled out";
+	if ( $( ".name" ).val() === "" ) {
+		$( "span" ).text( message ).show();
+		return false;
+	}
+	return true;
+	});
+
+$("form").submit(function() {
+var message = "Email field must be filled out";
+	if ( $( ".email" ).val() === "" ) {
+		$( "span" ).text( message ).show();
+		return false;
+	}
+	return true;
+	});
+</script>
+
+</body>
+</html>

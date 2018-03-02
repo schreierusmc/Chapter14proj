@@ -1,0 +1,19 @@
+body {
+    background-color:white;
+	color:black;
+	font-family:Arial,Heelvetica,sans-serif,;
+}
+h1 { color:black;
+	font-family:Times New Roman;
+    font-style: italic;
+}
+fieldset {
+    background-color: lightgrey;
+    width: 33.3%;
+}
+input[type=submit] {
+    font-size: 20px;
+}
+input[type=reset] {
+    font-size: 20px;
+}
